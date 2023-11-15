@@ -2,9 +2,10 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.Drivetrain;
 
 public class Drive extends CommandBase {
-    DriveTrain drivetrain;
+    Drivetrain drivetrain;
     Joystick leftJ;
     Joystick rightJ;
     Drive drive;
@@ -21,7 +22,7 @@ public class Drive extends CommandBase {
     }
 
     public void execute() {
-        drivetrain.drive(leftJ.getY(), right.getY());
+        drivetrain.drive(leftJ.getY(), rightJ.getY());
     }
 
     public boolean isFinished() {
