@@ -8,7 +8,6 @@ public class Drive extends CommandBase {
     Drivetrain drivetrain;
     Joystick leftJ;
     Joystick rightJ;
-    Drive drive;
 
     public Drive(Drivetrain d, Joystick L, Joystick r) {
         drivetrain = d;
@@ -18,10 +17,10 @@ public class Drive extends CommandBase {
     }
     public void initialize() {
         drivetrain.drive(0, 0);
-
     }
 
     public void execute() {
+        System.out.println(leftJ.getY() + " " + rightJ.getY());
         drivetrain.drive(leftJ.getY(), rightJ.getY());
     }
 

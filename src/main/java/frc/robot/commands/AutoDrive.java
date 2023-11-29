@@ -11,10 +11,11 @@ public class AutoDrive extends CommandBase {
     double time;
 
     public AutoDrive(Drivetrain dt, double ls, double rs, double t) {
-drivetrain = dt;
-leftspeed = ls;
-rightspeed = rs;
-time = t;
+        timer = new Timer();
+        drivetrain = dt;
+        leftspeed = ls;
+        rightspeed = rs;
+        time = t;
     }
     public void initialize(){
         timer.reset();

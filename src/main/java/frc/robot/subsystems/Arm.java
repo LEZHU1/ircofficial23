@@ -10,11 +10,15 @@ public class Arm extends SubsystemBase{
     VictorSP armVictor;
 
     public Arm() {
-        armVictor = new VictorSP(1);
+        armVictor = new VictorSP(2);
     }
 
-    public void moveArm(double arm) {
-        armVictor.set(arm);
+    public void moveArm(double speed) {
+        armVictor.set(speed);
+    }
+
+    public void stop(){
+        armVictor.set(0);
     }
 }
 
